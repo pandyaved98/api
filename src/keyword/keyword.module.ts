@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { AstraService as AstraApiService } from 'src/astra/astra.service';
+import { AstraService as AstraApiService } from '../astra/astra.service';
 import { KeywordController } from './keyword.controller';
 import { KeywordService } from './keyword.service';
 
