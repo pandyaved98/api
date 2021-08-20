@@ -14,7 +14,7 @@ describe('KeywordService', () => {
         AstraModule.forRootAsync({
           useClass: AstraConfigService,
         }),
-        ConfigModule.forRoot(),
+        ConfigModule.forRoot({ isGlobal: true }),
       ],
       providers: [KeywordService, AstraService],
     }).compile();

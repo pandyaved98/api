@@ -2,8 +2,9 @@ import { AstraModule } from '@cahllagerfeld/nestjs-astra';
 import { ConfigModule } from '@nestjs/config';
 import { Test, TestingModule } from '@nestjs/testing';
 import { AstraConfigService } from '../astra/astra-config.service';
-// import { AstraService } from '../astra/astra.service';
+import { AstraService } from '../astra/astra.service';
 import { KeywordController } from './keyword.controller';
+import { KeywordService } from './keyword.service';
 
 describe('KeywordController', () => {
   let controller: KeywordController;
@@ -14,9 +15,10 @@ describe('KeywordController', () => {
         AstraModule.forRootAsync({
           useClass: AstraConfigService,
         }),
-        ConfigModule.forRoot(),
+        ConfigModule.forRoot({ isGlobal: true }),
       ],
       controllers: [KeywordController],
+      providers: [KeywordService, AstraService],
     }).compile();
 
     controller = module.get<KeywordController>(KeywordController);
