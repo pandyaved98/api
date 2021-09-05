@@ -9,6 +9,8 @@ tasks:
       sleep 30
       npm run start:dev
   - name: Docker
+    init: |
+      docker pull stargateio/stargate-3_11:v1.0.29
     command: |
       docker-compose up
       
