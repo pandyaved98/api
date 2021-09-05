@@ -11,5 +11,7 @@ export class DataConfigController {
   @UseGuards(JWTGuard, ScopesGuard)
   @ApiBearerAuth()
   @Scopes(ScopesDictionary.WRITE)
-  getAlexConfig() {}
+  getAlexConfig() {
+    return { text: "I'm alive" };
+  }
 }

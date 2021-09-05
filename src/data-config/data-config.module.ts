@@ -4,6 +4,6 @@ import { DataConfigService } from './data-config.service';
 
 @Module({
   controllers: [DataConfigController],
-  providers: [DataConfigService]
+  providers: [DataConfigService],
 })
 export class DataConfigModule {}
