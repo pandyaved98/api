@@ -10,6 +10,7 @@ import { LoggerMiddleware } from './logger/logger.middleware';
 import { CalendarModule } from './calendar/calendar.module';
 import { AstraModule } from '@cahllagerfeld/nestjs-astra';
 import { AstraConfigService } from './astra/astra-config.service';
+import { DataConfigModule } from './data-config/data-config.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { AstraConfigService } from './astra/astra-config.service';
       isGlobal: true,
     }),
     CalendarModule,
+    DataConfigModule,
   ],
   controllers: [AppController],
   providers: [AppService],
