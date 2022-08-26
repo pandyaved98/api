@@ -36,7 +36,7 @@
     "class-transformer": "^0.4.0",
     "class-validator": "^0.13.1",
     "helmet": "^4.6.0",
-    "mongoose": "^6.0.12",
+    "mongoose": "^6.4.6",
     "passport": "^0.4.1",
     "passport-unique-token": "^3.0.0",
     "reflect-metadata": "^0.1.13",
